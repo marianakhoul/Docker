@@ -76,16 +76,3 @@ Container logs of a detached container
 container logs $image_name
 ```
 
-### Example Dockerfile
-```
-FROM Ubuntu
-
-RUN apt-get update
-RUN apt-get install python
-
-RUN pip install flask
-RUN pip install flask-mysql
-
-COPY . /opt/source-code
-
-ENTRYPOIINT FLASK_APP=/opt/source-code/app.py  flask run
