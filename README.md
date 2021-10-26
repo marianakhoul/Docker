@@ -5,6 +5,26 @@ Repository to hold my Docker commands, examples and Dockerfiles for future needs
 An image is a template used to create containers.
 Containers are running instances of images that are isolated and have their own environments and set of processes.
 
+### Volume Mounting
+
+The container has a layered architecture.
+In the writable layer, data is stored and there are temporary files.
+The container layer only lives while the container is alive.
+All modifications to files happens in the container layer, and all data will be removed from the container.
+To preserve the data, need to add a persistent layer.
+Default files created under: /var/lib/docker -- stores volumes, images and files
+
+Step 1. Create volume using docker volume create under /var/lib/docker/volumes/data_volume
+Step 2. docker run -v data_volumes:/var/lib/mysql mysql
+
+Can run step 2 alone and docker will automatically mount the data.
+Need to specify the full path if data_volume is outside of /var/lib/docker/volumes -- this is called bind mounting
+
+Can add other variables to the bind mounting
+```
+docker run --mount type=bind, source=/data/mysql, target=/var/lib/mysql --name $Name_of_container
+```
+
 ### Basic Commands
 
 Run image
