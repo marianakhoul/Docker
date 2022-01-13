@@ -20,6 +20,7 @@ CMD python /app/app.py
 When you run an image and generate a container, you add a new writable layer (the “container layer”) on top of the underlying layers. All changes made to the running container, such as writing new files, modifying existing files, and deleting files, are written to this writable container layer [1].
 
 
+
 ### Volume Mounting
 
 The container has a layered architecture.
@@ -110,5 +111,5 @@ Container logs of a detached container
 ```
 container logs $image_name
 ```
-#### References
+
 [1]: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
