@@ -4,6 +4,21 @@ Repository to hold my Docker commands, examples and Dockerfiles for future needs
 ### Basics
 An image is a template used to create containers.
 Containers are running instances of images that are isolated and have their own environments and set of processes.
+A Docker image consists of read-only layers each of which represnts a Docker file instruction. The layers are stacked and each one is a delta of the changes from the previous layer.
+
+```
+FROM ubuntu:18.04
+COPY . ./app
+RUN make /app
+CMD python /app/app.py
+```
+1. FROM creates a layer from the ubuntu:18.04 Docker image
+2. COPY adds files from your Docker client's current directory
+3. RUN builds your application with make
+4. CMD specifies what command to run within the container.
+
+When you run an image and generate a container, you add a new writable layer (the “container layer”) on top of the underlying layers. All changes made to the running container, such as writing new files, modifying existing files, and deleting files, are written to this writable container layer [1].
+
 
 ### Volume Mounting
 
@@ -95,4 +110,5 @@ Container logs of a detached container
 ```
 container logs $image_name
 ```
-
+#### References
+[1]: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
