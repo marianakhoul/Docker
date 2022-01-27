@@ -1,3 +1,9 @@
+
+To run the above Dockerfile, run the command:
+```
+docker build -t samtools .
+```
+
 ## Types of errors you will occur and how to fix them
 
 The RUN install command had the following at first
@@ -81,9 +87,4 @@ libbz2-dev \
 liblzma-dev \
 make && \
 rm -rf /var/lib/apt/lists/*
-```
-
-To run the above Dockerfile, run the command:
-```
-docker build -t samtools .
 ```
