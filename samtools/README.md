@@ -1,8 +1,13 @@
 
 To run the above Dockerfile, run the command:
 ```
-docker build -t samtools .
+docker build . -t samtools:1.3
 ```
+To enter into an image and see what has been downloaded and where run
+```
+docker run -v (Directory on local computer):(name of directory inside the image) -it samtools:1.3
+```
+
 
 ## Types of errors you will occur and how to fix them
 
