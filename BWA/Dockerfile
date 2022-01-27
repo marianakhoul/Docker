@@ -12,6 +12,6 @@ RUN wget https://github.com/lh3/bwa/releases/download/v0.7.17/bwa-0.7.17.tar.bz2
  tar jxf bwa-0.7.17.tar.bz2 && \
  rm bwa-0.7.17.tar.bz2 && \
  cd bwa-0.7.17 &&\
- make prefix=/usr/bin install
+ make install
  
  ENV PATH=${PATH}:/usr/bin/bwa-0.7.17
