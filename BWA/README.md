@@ -1,5 +1,13 @@
 ## Issues
 MAC face an ARM architecture issue while using 'make' for BWA.
+```
+ksw.c:29:10: fatal error: emmintrin.h: No such file or directory
+#include <emmintrin.h>
+			^~~~~~~~~~~~~
+compilation terminated.
+Makefile:25: recipe for target 'ksw.o' failed
+make: *** [ksw.o] Error 1
+```
 How it should have worked but didn't
 ```
 FROM ubuntu:18.04
