@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:xenial
 
 MAINTAINER Maria Nakhoul <maria.nakhoul.9@gmail.com>
 
