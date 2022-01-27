@@ -19,4 +19,4 @@ RUN wget https://github.com/lh3/bwa/releases/download/v0.7.17/bwa-0.7.17.tar.bz2
 		cd bwa-0.7.17 &&\
 		make
  
- ENV PATH=${PATH}:/usr/bin/bwa-0.7.17
+ENV PATH=${PATH}:/usr/bin/bwa-0.7.17
