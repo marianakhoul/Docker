@@ -12,12 +12,13 @@ liblzma-dev \
 make && \
 rm -rf /var/lib/apt/lists/*
 
+WORKDIR /usr/bin
 
 RUN wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2 && \
 	tar jxf samtools-1.9.tar.bz2 && \
 	rm samtools-1.9.tar.bz2 && \
 	cd samtools-1.9 && \
-	./configure && \
-	make install
+	make prefix=/usr/bin install
 
-ENV PATH=${PATH}:/usr/src/samtools-1.9 
+ENV PATH=${PATH}:/usr/bin/samtools-1.9 
+
