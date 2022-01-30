@@ -91,7 +91,7 @@ Run versions of images usng tagging
 ```
 docker run redis:4.0
 ```
-Run using stdin -t is pseudo terminal and -i is interactive
+Run using stdin -t is pseudo terminal and -i is interactive. Comes back with an interactive shell inside your container with everything installed from the Dockerfile.
 ```
 docker run -it $image_name
 ```
@@ -99,7 +99,7 @@ Port mapping
 ```
 docker run -p 80:5000 $image_name
 ```
-Volume Mapping
+Volume Mapping. The first path is the path on your local machine and the second path after the : is the path inside the container.
 ```
 docker run -v /opt/datadir:/var/lib/mqsql mysql
 ```
