@@ -19,7 +19,12 @@ CMD python /app/app.py
 
 When you run an image and generate a container, you add a new writable layer (the “container layer”) on top of the underlying layers. All changes made to the running container, such as writing new files, modifying existing files, and deleting files, are written to this writable container layer [1].
 
+### Building an Image
 
+If you pulled an image or built a Dockerfile, you need to build the image. Use the command:
+```
+docker build . # in the directory where your Dockerfile is
+```
 
 ### Volume Mounting
 
