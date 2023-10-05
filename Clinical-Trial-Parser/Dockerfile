@@ -6,8 +6,8 @@ build-essential \
 wget \
 curl \
 git \
-python3.7 \
-python3.7-dev \
-python3.7-distutils
+python3.9 \
+python3.9-dev \
+python3.9-distutils
 
 
