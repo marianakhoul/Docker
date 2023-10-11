@@ -1,6 +1,7 @@
 from ubuntu:20.04
 
-RUN apt-get update && apt-get install -y --fix-missing && \
+RUN apt-get update 
+RUN apt-get install -y --fix-missing \
     build-essential \
     wget \
     git 
