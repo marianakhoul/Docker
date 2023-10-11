@@ -5,7 +5,8 @@ RUN apt-get install -y --fix-missing \
     build-essential \
     wget \
     git \
-    python3
+    python3 \
+    python3-pip
 
 #Install GO version 1.21.2
 ARG GOLANG_VERSION=1.21.2
@@ -18,10 +19,6 @@ ENV PATH="${PATH}:/usr/local/go/bin"
 
 #git clone repo
 RUN git clone https://github.com/facebookresearch/Clinical-Trial-Parser.git
-
-RUN apt-get update 
-RUN apt-get install -y --fix-missing \
-    python3-pip
 
 RUN pip install pytext-nlp
 RUN pip install nltk
