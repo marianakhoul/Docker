@@ -41,5 +41,3 @@ ARG _GLIBCXX_USE_CXX11_ABI=1
 ARG CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 RUN cd pytorch && BUILD_CAFFE2=1 python setup.py develop
 
-
-
