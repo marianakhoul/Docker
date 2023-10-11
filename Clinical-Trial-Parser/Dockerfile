@@ -29,7 +29,12 @@ RUN conda install cmake ninja
 
 RUN cd pytorch && pip install -r requirements.txt
 
-RUN conda install -c conda-forge mkl-include mkl
+#Not working
+#RUN conda install -c conda-forge mkl-include mkl
+
+ARG _GLIBCXX_USE_CXX11_ABI=1
+ARG CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
+RUN cd pytorch && python setup.py develop
 
 
 
