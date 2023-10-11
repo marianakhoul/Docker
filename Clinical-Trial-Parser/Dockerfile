@@ -6,7 +6,7 @@ RUN apt-get install -y --fix-missing \
     wget \
     git \
     python3.5 \
-    python3.5-pip
+    python3-pip
 
 #Install GO version 1.21.2
 ARG GOLANG_VERSION=1.21.2
