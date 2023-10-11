@@ -19,4 +19,6 @@ ENV PATH="${PATH}:/usr/local/go/bin"
 #git clone repo
 RUN git clone https://github.com/facebookresearch/Clinical-Trial-Parser.git
 
-#RUN cd Clinical-Trial-Parser && pip install -r requirements.txt
+RUN pip3 install pytext-nlp
+RUN pip3 install nltk
+RUN pip3 install numpy
