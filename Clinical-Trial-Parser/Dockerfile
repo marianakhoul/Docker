@@ -33,7 +33,7 @@ RUN cd pytorch && pip install -r requirements.txt
 #RUN conda install -c conda-forge mkl-include mkl
 
 RUN apt-get update
-RUN apt-get install -y build-essential
+RUN apt-get install -y --fix-missing build-essential
 
 ARG _GLIBCXX_USE_CXX11_ABI=1
 ARG CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
