@@ -25,7 +25,11 @@ RUN git clone --recursive https://github.com/pytorch/pytorch && \
     git submodule sync && \
     git submodule update --init --recursive
 
+RUN conda install cmake ninja
 
+RUN pip install -r requirements.txt && make triton
+
+RUN conda install mkl mkl-include
 
 
 
