@@ -27,10 +27,7 @@ RUN git clone --recursive https://github.com/pytorch/pytorch && \
 
 RUN conda install cmake ninja
 
-RUN apt-get update && apt-get install -y \
-    build-essential
-
-RUN cd pytorch && pip install -r requirements.txt && make triton
+RUN cd pytorch && pip install -r requirements.txt
 
 RUN conda install mkl mkl-include
 
