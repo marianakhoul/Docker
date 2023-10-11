@@ -19,6 +19,9 @@ RUN conda install -y pytorch torchvision -c pytorch
 #git clone repo
 RUN git clone https://github.com/facebookresearch/Clinical-Trial-Parser.git
 
+#git clone pytorch
+RUN git clone https://github.com/pytorch/pytorch.git
+
 
 
 
