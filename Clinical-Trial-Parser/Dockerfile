@@ -20,6 +20,6 @@ ENV PATH="${PATH}:/usr/local/go/bin"
 #git clone repo
 RUN git clone https://github.com/facebookresearch/Clinical-Trial-Parser.git
 
-RUN pip install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html
+#RUN pip install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html
 RUN pip install nltk
 RUN pip install numpy
