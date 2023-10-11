@@ -29,7 +29,7 @@ RUN conda install cmake ninja
 
 RUN cd pytorch && pip install -r requirements.txt
 
-RUN conda install mkl mkl-include
+RUN conda install -c anaconda mkl-include mkl
 
 
 
