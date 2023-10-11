@@ -1,4 +1,4 @@
-TAG = clinical_trial_parser:20.04
+TAG = clinical_trial_parser:20.04.2
 
 img:
 	docker build --tag=$(TAG) .
