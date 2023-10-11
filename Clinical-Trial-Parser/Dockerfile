@@ -5,7 +5,7 @@ RUN apt-get install -y --fix-missing \
     build-essential \
     wget \
     git \
-    python3 \
+    python3.5 \
     python3-pip
 
 #Install GO version 1.21.2
