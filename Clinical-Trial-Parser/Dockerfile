@@ -32,6 +32,9 @@ RUN cd pytorch && pip install -r requirements.txt
 #Not working
 #RUN conda install -c conda-forge mkl-include mkl
 
+RUN apt-get update
+RUN apt-get install -y build-essential
+
 ARG _GLIBCXX_USE_CXX11_ABI=1
 ARG CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 RUN cd pytorch && python setup.py develop
