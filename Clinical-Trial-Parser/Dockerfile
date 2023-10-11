@@ -37,6 +37,6 @@ RUN apt-get install -y --fix-missing build-essential
 
 RUN pip install cmake --upgrade
 
-#ARG CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
-#RUN cd pytorch && BUILD_CAFFE2=ON python setup.py develop
+ARG CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
+RUN cd pytorch && python setup.py develop
 
