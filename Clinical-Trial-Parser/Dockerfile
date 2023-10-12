@@ -29,5 +29,6 @@ RUN pip3 install setuptools==58.0.3
 RUN apt-get install gfortran libopenblas-dev liblapack-dev
 
 RUN pip3 install numpy==1.23.0
+RUN pip install pybind11
 RUN pip3 install cmake
 RUN pip3 install nltk
