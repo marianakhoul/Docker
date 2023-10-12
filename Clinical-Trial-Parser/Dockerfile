@@ -5,9 +5,9 @@ RUN apt-get install -y --fix-missing \
     build-essential \
     wget \
     git \
-    python3.7 \
-    python3.7-dev \
-    python3.7-distutils
+    python3.8 \
+    python3.8-dev \
+    python3.8-distutils
 
 #Install GO version 1.21.2
 ARG GOLANG_VERSION=1.21.2
@@ -24,4 +24,3 @@ RUN git clone https://github.com/facebookresearch/Clinical-Trial-Parser.git
 RUN pip3 install --upgrade pip
 RUN pip3 install cmake
 RUN pip3 install nltk
-RUN pip3 install numpy
