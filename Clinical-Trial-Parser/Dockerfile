@@ -23,5 +23,6 @@ ENV PATH="${PATH}:/usr/local/go/bin"
 RUN git clone https://github.com/facebookresearch/Clinical-Trial-Parser.git
 
 RUN pip3 install --upgrade pip
+RUN pip3 install Cython==0.29.25
 RUN pip3 install cmake
 RUN pip3 install nltk
