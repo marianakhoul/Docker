@@ -7,7 +7,8 @@ RUN apt-get install -y --fix-missing \
     git \
     python3.8 \
     python3.8-dev \
-    python3.8-distutils
+    python3.8-distutils \
+    python3-pip
 
 #Install GO version 1.21.2
 ARG GOLANG_VERSION=1.21.2
